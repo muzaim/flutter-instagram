@@ -44,13 +44,13 @@ class SearchPages extends StatelessWidget {
             Expanded(
               child: GridView.builder(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 3,
+                      crossAxisCount: 2,
                       crossAxisSpacing: 3,
                       mainAxisSpacing: 3,
                       childAspectRatio: 1),
                   itemBuilder: (context, index) {
                     return Image.network(
-                      "https://picsum.photos/600/300?random=$index", // URL gambar dinamis
+                      "https://picsum.photos/600/300?random=${index + 100}", // Menambahkan 100 pada index
                       fit: BoxFit.cover, // Mengatur gambar agar terisi penuh
                     );
                   }),

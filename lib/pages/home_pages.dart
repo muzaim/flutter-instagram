@@ -1,17 +1,18 @@
 import 'package:belajar_instagram/widgets/bubble_story.dart';
 import 'package:belajar_instagram/widgets/user_post.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePages extends StatelessWidget {
   HomePages({super.key});
   final List _users = [
     "Your story", // Alvin Henry
-    "azkya_putri", // Azkya Putri
-    "johan_santoso", // Johan Santoso
+    "azkya.susanti", // Azkya Putri
+    "pribadi.ikmal", // Johan Santoso
     "alfahrianto", // Alfa Hrianto
-    "alan_setiawan", // Alan Setiawan
-    "dwi_rahmawati", // Dwi Rahmawati
-    "indra_hermawan", // Indra Hermawan
+    "setiawan", // Alan Setiawan
+    "rahmawati", // Dwi Rahmawati
+    "indra", // Indra Hermawan
     "rani_susanti" // Rani Susanti
   ];
 
@@ -72,10 +73,7 @@ class HomePages extends StatelessWidget {
       appBar: AppBar(
         title: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 0),
-          child: Text(
-            "Instagram",
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
-          ),
+          child: SvgPicture.asset('assets/icons/ic_logo.svg'),
         ),
         centerTitle: false,
         elevation: 0,
@@ -87,10 +85,7 @@ class HomePages extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8),
-            child: Icon(
-              Icons.mail_outline_outlined,
-              size: 30,
-            ),
+            child: SvgPicture.asset('assets/icons/ic_send.svg'),
           )
         ],
       ),

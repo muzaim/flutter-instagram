@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class BubbleStory extends StatelessWidget {
+class ProfileReels extends StatelessWidget {
   final String name;
   final bool
       isFirst; // Menambahkan parameter untuk menandakan apakah ini item pertama
 
-  const BubbleStory({super.key, required this.name, this.isFirst = false});
+  const ProfileReels({super.key, required this.name, this.isFirst = false});
 
   @override
   Widget build(BuildContext context) {
@@ -17,14 +17,14 @@ class BubbleStory extends StatelessWidget {
             alignment: Alignment.bottomRight,
             children: [
               CircleAvatar(
-                radius: 42,
+                radius: 43,
                 backgroundColor: isFirst
                     ? Colors.transparent
-                    : Colors.pinkAccent[200], // No border for first item
+                    : Colors.grey[350], // No border for first item
                 child: CircleAvatar(
-                  radius: 40,
-                  backgroundImage:
-                      NetworkImage('https://i.pravatar.cc/100?u=$name'),
+                  radius: 39,
+                  backgroundImage: NetworkImage(
+                      'https://picsum.photos/600/300?random=$name'),
                 ),
               ),
               if (isFirst)

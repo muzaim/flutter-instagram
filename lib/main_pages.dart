@@ -1,4 +1,7 @@
+import 'package:belajar_instagram/pages/add_post.dart';
 import 'package:belajar_instagram/pages/home_pages.dart';
+import 'package:belajar_instagram/pages/profile.dart';
+import 'package:belajar_instagram/pages/reels_pages.dart';
 import 'package:belajar_instagram/pages/search_pages.dart';
 import 'package:flutter/material.dart';
 
@@ -15,15 +18,9 @@ class _MainPagesState extends State<MainPages> {
   final List<Widget> _pages = [
     HomePages(),
     SearchPages(),
-    const Center(
-      child: Text("Add Post"),
-    ),
-    const Center(
-      child: Text("Reels"),
-    ),
-    const Center(
-      child: Text("Account"),
-    ),
+    AddPost(),
+    ReelsPages(),
+    Profile(),
   ];
 
   void _handleSelected(int index) {
@@ -66,8 +63,14 @@ class _MainPagesState extends State<MainPages> {
                     : Icons.video_library_outlined),
                 label: "Account"),
             BottomNavigationBarItem(
-                icon: Icon(
-                    _selectedItem == 4 ? Icons.person : Icons.person_outlined),
+                icon: CircleAvatar(
+                  radius: 15,
+                  backgroundColor: Colors.black,
+                  child: CircleAvatar(
+                    backgroundImage:
+                        NetworkImage('https://i.pravatar.cc/100?u=Your story'),
+                  ),
+                ),
                 label: "Account"),
           ]),
     );
